@@ -39,7 +39,7 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	if ( wp_is_mobile() )
 		add_action( 'login_head', 'wp_login_viewport_meta' );
 
-	if ( empty($wp_error) )
+	if ( !empty($wp_error) )
 		$wp_error = new WP_Error();
 
 	// Shake it!
